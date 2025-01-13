@@ -1,0 +1,7 @@
+{
+  "name": "appng19_standAlone",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}

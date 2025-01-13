@@ -1,0 +1,1 @@
+# Ejemplo APP con Stand Alone

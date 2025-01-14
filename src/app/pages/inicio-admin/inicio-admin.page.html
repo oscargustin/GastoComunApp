@@ -9,8 +9,8 @@
     <ion-segment-button value="pagos">
       <ion-label>Historial de pagos</ion-label>
     </ion-segment-button>
-    <ion-segment-button value="historial">
-      <ion-label>Historial</ion-label>
+    <ion-segment-button value="residente">
+      <ion-label>Añadir Residente</ion-label>
     </ion-segment-button>
   </ion-segment>
 
@@ -22,7 +22,9 @@
 <app-pagosvista-admin></app-pagosvista-admin>
   </ng-container>
   <ng-container>
-    <ng-container *ngIf="selectedTab === 'historial'"></ng-container>
+    <ng-container *ngIf="selectedTab === 'residente'">
+      <app-residenteadd></app-residenteadd>
+    </ng-container>
   </ng-container>
 
 

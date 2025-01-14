@@ -21,8 +21,11 @@ export const routes: Routes = [
             (m) => m.TransaccionesPage),
       },
       {
-        path: 'historial',
-        loadComponent: () => import('./pages/historial/historial.page').then( m => m.HistorialPage),
+        path: 'registro-usuario',
+        loadComponent: () =>
+          import('./pages/registro-usuario/registro-usuario.page').then(
+            (m) => m.RegistroUsuarioPage
+          ),
       },
       {
         path: '',
@@ -41,13 +44,7 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./pages/inicio-admin/inicio-admin.page').then((m) => m.InicioAdminPage),
   },
-  {
-    path: 'registro-usuario',
-    loadComponent: () =>
-      import('./pages/registro-usuario/registro-usuario.page').then(
-        (m) => m.RegistroUsuarioPage
-      ),
-  },
+  
   {
     path: '',
     redirectTo: 'login', // Redirige al login si no se especifica una ruta

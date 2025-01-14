@@ -1,0 +1,31 @@
+<ion-card>
+  <ion-card-header>
+    <ion-card-title class="ion-text-center">Añadir Residente</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <form (ngSubmit)="addResident()">
+      <ion-item>
+        <ion-label position="floating">Nombre Completo</ion-label>
+        <ion-input type="text" [(ngModel)]="resident.name" name="name" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Correo Electrónico</ion-label>
+        <ion-input type="email" [(ngModel)]="resident.email" name="email" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Número de Apartamento</ion-label>
+        <ion-input type="text" [(ngModel)]="resident.apartment" name="apartment" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Rol</ion-label>
+        <ion-select [(ngModel)]="resident.role" name="role" required>
+          <ion-select-option value="residente">Propietario</ion-select-option>
+          <ion-select-option value="administrador">Dueño</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <div class="ion-padding">
+        <ion-button expand="block" type="submit" color="primary">Añadir Residente</ion-button>
+      </div>
+    </form>
+  </ion-card-content>
+</ion-card>

@@ -1,0 +1,54 @@
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>Añadir Residente</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+    <form>
+      <ion-item>
+        <ion-label position="floating">Nombre</ion-label>
+        <ion-input [(ngModel)]="residente.nombre" name="nombre" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Correo Electrónico</ion-label>
+        <ion-input [(ngModel)]="residente.correo" name="correo" type="email" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">RUT</ion-label>
+        <ion-input [(ngModel)]="residente.rut" name="rut" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Teléfono</ion-label>
+        <ion-input [(ngModel)]="residente.telefono" name="telefono" type="tel" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Departamento</ion-label>
+        <ion-input [(ngModel)]="residente.departamento" name="departamento" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Piso</ion-label>
+        <ion-input [(ngModel)]="residente.piso" name="piso" type="number" required></ion-input>
+      </ion-item>
+
+      <ion-item class="ion-margin">
+        <ion-label>Rol</ion-label>
+        <ion-select [(ngModel)]="residente.rol" name="rol" required>
+          <ion-select-option value="residente">Propietario</ion-select-option>
+          <ion-select-option value="administrador">Arrendatario</ion-select-option>
+          <ion-select-option value=""></ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      
+    </form>
+    <ion-button ic shape="round" color="primary" (click)="agregarResidente()">
+      Añadir Residente
+    </ion-button>
+  </ion-card-content>
+
+</ion-card>

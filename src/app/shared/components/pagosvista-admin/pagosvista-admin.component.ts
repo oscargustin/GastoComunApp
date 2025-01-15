@@ -10,8 +10,7 @@ import { IonicModule } from '@ionic/angular';
   styleUrls: ['./pagosvista-admin.component.scss'],
   imports:[IonicModule, CommonModule ]
 })
-export class PagosvistaAdminComponent  implements OnInit 
-{
+export class PagosvistaAdminComponent  implements OnInit {
   historialPagos: { tituloUser: string; descripcionUser: string; fechaUser: string; avatarUser: string }[] = [];
 
 ngOnInit() {

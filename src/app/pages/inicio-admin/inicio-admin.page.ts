@@ -7,7 +7,7 @@ import { RouterLink, RouterModule } from '@angular/router';
 import { HeaderComponent } from "../../shared/components/header/header.component";
 import { MuroComunidadComponent } from "../../shared/components/muro-comunidad/muro-comunidad.component";
 import { PagosvistaAdminComponent } from 'src/app/shared/components/pagosvista-admin/pagosvista-admin.component';
-import { ResidenteaddComponent } from '../residenteadd/residenteadd.component';
+import { ResidenteaddComponent } from '../../shared/components/residenteadd/residenteadd.component';
 
 
 @Component({

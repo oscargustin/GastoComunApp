@@ -8,7 +8,7 @@ import { IonHeader, IonTitle, IonToolbar, IonButtons, IonBackButton, IonButton, 
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
   standalone: true,
-  imports: [IonLabel, IonButton,IonIcon, CommonModule,IonBackButton, IonButtons, IonTitle, IonHeader, CommonModule, FormsModule, IonToolbar, IonButtons ]
+  imports: [IonIcon, CommonModule, IonButtons, IonTitle, IonHeader, CommonModule, FormsModule, IonToolbar, IonButtons ]
 })
 export class HeaderComponent  implements OnInit {
 

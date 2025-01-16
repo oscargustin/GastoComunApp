@@ -9,7 +9,7 @@ import { MuroComunidadComponent } from "../../shared/components/muro-comunidad/m
   templateUrl: './home.page.html',
   styleUrls: ['./home.page.scss'],
   standalone: true,
-  imports: [MuroComunidadComponent,IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, MuroComunidadComponent]
+  imports: [MuroComunidadComponent,IonContent, IonToolbar, CommonModule, FormsModule, MuroComunidadComponent]
 })
 export class HomePage implements OnInit {
 

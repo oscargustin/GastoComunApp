@@ -7,14 +7,14 @@ import { RouterLink, RouterModule } from '@angular/router';
 import { HeaderComponent } from "../../shared/components/header/header.component";
 import { MuroComunidadComponent } from "../../shared/components/muro-comunidad/muro-comunidad.component";
 import { PagosvistaAdminComponent } from 'src/app/shared/components/pagosvista-admin/pagosvista-admin.component';
-import { ResidenteaddComponent } from '../../shared/components/residenteadd/residenteadd.component';
+import { AgregarResidenteComponent } from "../../shared/components/agregar-residente/agregar-residente.component";
 
 
 @Component({
   selector: 'app-inicio-admin',
   templateUrl: './inicio-admin.page.html',
   styleUrls: ['./inicio-admin.page.scss'],
-  imports: [ResidenteaddComponent,CommonModule,HeaderComponent, MuroComunidadComponent, IonicModule,PagosvistaAdminComponent, MuroComunidadComponent, FormsModule]
+  imports: [ CommonModule, HeaderComponent, MuroComunidadComponent, IonicModule, PagosvistaAdminComponent, MuroComunidadComponent, FormsModule, AgregarResidenteComponent]
 })
 export class InicioAdminPage implements OnInit {
 

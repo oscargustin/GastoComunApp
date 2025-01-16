@@ -11,28 +11,25 @@ export const routes: Routes = [
         loadComponent: () => import('./pages/home/home.page').then((m) => m.HomePage),
       },
       {
-        path: 'settings',
-        loadComponent: () => import('./pages/settings/settings.page').then((m) => m.SettingsPage),
-      },
-      {
         path: 'transacciones',
         loadComponent: () =>
           import('./pages/transacciones/transacciones.page').then(
             (m) => m.TransaccionesPage),
       },
       {
-        path: 'registro-usuario',
-        loadComponent: () =>
-          import('./pages/registro-usuario/registro-usuario.page').then(
-            (m) => m.RegistroUsuarioPage
-          ),
+        path: 'settings',
+        loadComponent: () => import('./pages/settings/settings.page').then((m) => m.SettingsPage),
+      },
+      {
+        path: 'residenteadd',
+        loadComponent: () => import('./pages/residenteadd/residenteadd.page').then(m => m.ResidenteaddPage)
       },
       {
         path: '',
         redirectTo: 'home', // Redirige al tab 'home' si no se especifica un hijo
         pathMatch: 'full',
       },
-      
+
     ],
   },
   {
@@ -44,7 +41,7 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./pages/inicio-admin/inicio-admin.page').then((m) => m.InicioAdminPage),
   },
-  
+
   {
     path: '',
     redirectTo: 'login', // Redirige al login si no se especifica una ruta
@@ -53,7 +50,8 @@ export const routes: Routes = [
   {
     path: '**',
     redirectTo: 'login', // Manejo de rutas no existentes
-  },
-  
+  }
+
+
 
 ];

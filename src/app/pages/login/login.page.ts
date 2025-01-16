@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import {IonicModule} from '@ionic/angular';
-import { RouterLink, RouterModule } from '@angular/router';
+import { Router, RouterLink, RouterModule } from '@angular/router';
 import { HeaderComponent } from "../../shared/components/header/header.component";
 
 @Component({
@@ -10,21 +10,23 @@ import { HeaderComponent } from "../../shared/components/header/header.component
   templateUrl: './login.page.html',
   styleUrls: ['./login.page.scss'],
   standalone: true,
-  imports: [CommonModule, FormsModule, IonicModule, RouterModule, HeaderComponent]
+  imports: [CommonModule, IonicModule, RouterModule, ReactiveFormsModule]
 })
-export class LoginPage implements OnInit {
+export class LoginPage {
 
-  constructor() { }
+  form  = new FormGroup({
+    email: new FormControl('',[Validators.email, Validators.required]),
+    password: new FormControl('', [Validators.required]),
 
-  usuario={
-    username:'',
-    password:''
-  }
-  ngOnInit() {
-  }
-    
-    onSubmit(){
-      console.log("works!!!!")
+  })
+
+  constructor(private router:Router) { }
+
+
+    submit(){
+     if( this.form.valid){
+        this.router.navigateByUrl('/tabs');
+      }
     }
 
 }
